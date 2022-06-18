@@ -1,3 +1,11 @@
+import { useGetFilmByNameQuery } from "./services/film";
+
 export const App = () => {
-  return <div>Films</div>;
+  const { data } = useGetFilmByNameQuery("pokemon");
+  console.log("data", data);
+  return (
+    <div>
+      <h1>Films</h1>
+    </div>
+  );
 };
