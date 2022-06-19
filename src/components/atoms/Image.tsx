@@ -1,8 +1,8 @@
 interface Props {
   src: string;
-  width: number;
+  width?: number;
 }
 
-export const Image = ({ src, width = 60 }: Props) => {
+export const Image = ({ src, width = 300 }: Props) => {
   return <img src={src} alt={src} width={width} />;
 };

@@ -1,3 +1,5 @@
+import { Image } from "../../components/atoms/Image";
+
 type Ratings = {
   Source: string;
   Value: string;
@@ -34,14 +36,24 @@ export const Detail = ({
   Runtime,
   Type,
   Director,
+  imdbRating,
 }: PropsDetail) => {
   return (
     <div>
-      <img src={Poster} alt={Poster} />
+      <Image src={Poster} />
       <h1>{Title}</h1>
-      <div>{Runtime}</div>
-      <div>{Type}</div>
-      <div>{Director}</div>
+      <div>
+        Runtime: <strong>{Runtime}</strong>
+      </div>
+      <div>
+        Type: <strong>{Type}</strong>
+      </div>
+      <div>
+        Director: <strong>{Director}</strong>
+      </div>
+      <div>
+        IMDB Rating: <strong>{imdbRating}</strong>
+      </div>
     </div>
   );
 };
