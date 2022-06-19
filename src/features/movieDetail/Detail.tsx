@@ -1,4 +1,5 @@
 import { Image } from "../../components/atoms/Image";
+import "./Detail.scss";
 
 type Ratings = {
   Source: string;
@@ -39,7 +40,7 @@ export const Detail = ({
   imdbRating,
 }: PropsDetail) => {
   return (
-    <div>
+    <div className="container movie-detail">
       <Image src={Poster} />
       <h1>{Title}</h1>
       <div>

@@ -1,0 +1,27 @@
+table.movie {
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  margin-top: var(--margin-top);
+
+  th {
+    text-align: left;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  th,
+  td {
+    padding: 10px 20px;
+  }
+  tr:nth-child(even) {
+    background-color: Lavender;
+  }
+}
+
+form.movie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}

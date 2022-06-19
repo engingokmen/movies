@@ -1,9 +1,15 @@
 interface Props extends React.HTMLAttributes<HTMLTableElement> {
   data: { id: string }[];
   hiddenCells?: string[];
+  className: string;
 }
 
-export const Table = ({ data, hiddenCells = [], onClick }: Props) => {
+export const Table = ({
+  data,
+  hiddenCells = [],
+  className,
+  onClick,
+}: Props) => {
   // header cells
   const th = Object.keys(data[0]).map(
     (key: string) =>
@@ -26,7 +32,7 @@ export const Table = ({ data, hiddenCells = [], onClick }: Props) => {
     );
 
   return (
-    <table onClick={onClick} className="w-full table-auto">
+    <table onClick={onClick} className={className}>
       <thead>
         <tr>{th}</tr>
       </thead>

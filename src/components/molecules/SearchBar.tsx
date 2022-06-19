@@ -17,7 +17,7 @@ export const SearchBar = ({
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="movie">
       <input
         placeholder="Search"
         id="test"

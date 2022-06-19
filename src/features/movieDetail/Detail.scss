@@ -1,0 +1,15 @@
+.movie-detail {
+  img {
+    box-shadow: 4px 4px 16px gray;
+  }
+
+  h1 {
+    text-align: center;
+    color: var(--color-bg);
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+  }
+}
