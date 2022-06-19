@@ -1,5 +1,3 @@
-import { Films } from "./pages/Film";
+import { Routing } from "./routing";
 
-export const App = () => {
-  return <Films />;
-};
+export const App = () => <Routing />;
