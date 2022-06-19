@@ -1,10 +1,5 @@
-import { Movie } from "./features/movie/Movie";
+import { Films } from "./pages/Film";
 
 export const App = () => {
-  return (
-    <div>
-      <h1>Movies</h1>
-      <Movie />
-    </div>
-  );
+  return <Films />;
 };
