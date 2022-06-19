@@ -12,7 +12,7 @@ export const movieApi = createApi({
     baseUrl: "https://www.omdbapi.com/",
   }),
   endpoints: (builder) => ({
-    getFilm: builder.query({
+    getMovies: builder.query({
       query: (data) =>
         "?" +
         new URLSearchParams({
@@ -20,7 +20,10 @@ export const movieApi = createApi({
           apikey: String(process.env.REACT_APP_API_KEY),
         }).toString(),
     }),
+    getMovieById: builder.query({
+      query: (id) => `?i=${id}&apikey=${String(process.env.REACT_APP_API_KEY)}`,
+    }),
   }),
 });
 
-export const { useGetFilmQuery } = movieApi;
+export const { useGetMoviesQuery, useGetMovieByIdQuery } = movieApi;
