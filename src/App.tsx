@@ -1,10 +1,10 @@
-import { Listing } from "./features/listing/Listing";
+import { Movie } from "./features/movie/Movie";
 
 export const App = () => {
   return (
     <div>
-      <h1>Films</h1>
-      <Listing />
+      <h1>Movies</h1>
+      <Movie />
     </div>
   );
 };

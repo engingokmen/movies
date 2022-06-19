@@ -19,7 +19,7 @@ export const Table = ({ data, hiddenCells = [] }: Props) => {
     Object.entries(i).map(
       ([key, value]: [string, any], index: number) =>
         !hiddenCells.includes(key) && (
-          <td key={i.id + index} className="border-t">
+          <td key={i.id + String(index)} className="border-t">
             {value}
           </td>
         )
@@ -32,7 +32,7 @@ export const Table = ({ data, hiddenCells = [] }: Props) => {
       </thead>
       <tbody>
         {data.map((i: any, index: number) => (
-          <tr key={i.id + index}>{td(i)}</tr>
+          <tr key={i.id + String(index)}>{td(i)}</tr>
         ))}
       </tbody>
     </table>
